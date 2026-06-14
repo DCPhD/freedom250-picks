@@ -6,8 +6,8 @@
   when Row Level Security is enabled by the included database setup script.
 */
 window.FREEDOM_CONFIG = {
-  supabaseUrl: "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE",
-  supabasePublishableKey: "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE",
+  supabaseUrl: "https://hytpzamzhixfvctdbmwh.supabase.co",
+  supabasePublishableKey: "sb_publishable_PB9KT53vc96YlyKBYdNMRw___EsxaS5",
   eventCode: "FREEDOM250",
   adminEmail: "niugrads1999@gmail.com"
 };
