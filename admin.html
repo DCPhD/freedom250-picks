@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0c">
+  <title>Freedom 250 Picks — Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo" aria-hidden="true"><span>✦</span></div>
+    <div class="brand"><h1>Freedom 250 Admin</h1></div>
+    <div class="header-chips"><a class="chip" href="index.html" style="text-decoration:none">Participant view</a></div>
+  </header>
+
+  <main class="page admin-page">
+    <div id="modeNotice" class="notice"></div>
+    <div id="message" class="notice"></div>
+
+    <section id="loginPanel" class="join-panel admin-login">
+      <div style="grid-column:1/-1">
+        <h2>Organizer sign-in</h2>
+        <p class="muted">A secure sign-in link will be sent to the organizer email.</p>
+      </div>
+      <div class="field" style="grid-column:1/-1">
+        <label for="adminEmail">Organizer email</label>
+        <input id="adminEmail" readonly>
+      </div>
+      <button id="loginBtn" class="primary" style="grid-column:1/-1">Email me a sign-in link</button>
+    </section>
+
+    <section id="adminContent" class="hidden">
+      <div class="admin-toolbar">
+        <button id="refreshBtn" class="secondary">Refresh</button>
+        <button id="addFightBtn" class="secondary">Add fight</button>
+        <button id="exportBtn" class="secondary">Export CSV</button>
+        <button id="signOutBtn" class="ghost">Sign out</button>
+      </div>
+      <div id="adminFights" class="admin-fights"></div>
+    </section>
+  </main>
+
+  <div id="fightModal" class="modal-backdrop">
+    <div class="modal">
+      <h2 id="modalTitle">Add fight</h2>
+      <div class="admin-grid">
+        <div class="field"><label>Fighter 1</label><input id="modalF1"></div>
+        <div class="field"><label>Fighter 2</label><input id="modalF2"></div>
+        <div class="field"><label>Weight class</label><input id="modalWeight"></div>
+        <div class="field"><label>Maximum rounds</label><select id="modalRounds"><option value="3">3</option><option value="5">5</option></select></div>
+        <div class="field"><label>Display order</label><input id="modalOrder" type="number" min="1"></div>
+      </div>
+      <div class="modal-actions">
+        <button id="modalCancel" class="ghost">Cancel</button>
+        <button id="modalSave" class="primary">Save fight</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

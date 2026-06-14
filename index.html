@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0c">
+  <title>Freedom 250 Picks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo" aria-hidden="true"><span>✦</span></div>
+    <div class="brand"><h1>Freedom 250 Picks</h1></div>
+    <div class="header-chips">
+      <div class="chip">Access code: <strong>FREEDOM250</strong></div>
+      <div class="chip">Picks visible after each fight begins</div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div id="modeNotice" class="notice"></div>
+    <div id="message" class="notice"></div>
+
+    <section class="join-panel">
+      <div class="field">
+        <label for="displayName">Display name</label>
+        <input id="displayName" maxlength="30" autocomplete="nickname" placeholder="Example: KnuckleFan88">
+      </div>
+      <div class="field">
+        <label for="eventCode">Event code</label>
+        <input id="eventCode" value="FREEDOM250" autocapitalize="characters">
+      </div>
+      <button id="joinBtn" class="primary">Enter Pool</button>
+    </section>
+
+    <div id="appContent" class="hidden">
+      <div class="app-shell">
+        <section class="main-area">
+          <div class="section-title">
+            <h2>MAIN CARD</h2>
+            <div id="participantStatus" class="muted small"></div>
+          </div>
+          <div id="fights" class="fights"></div>
+
+          <div class="tabs">
+            <button class="tab active" data-tab="my-picks">My Picks</button>
+            <button class="tab" data-tab="group-picks">Group Picks & Leaderboard</button>
+          </div>
+          <section id="groupPicks" class="public-picks">
+            <div id="groupPicksContent"></div>
+          </section>
+        </section>
+
+        <aside class="sidebar">
+          <section class="sidebar-card">
+            <h3>🏆 Scoring</h3>
+            <div class="score-max">5 points max per fight</div>
+            <div class="score-row"><span>Winner / result</span><strong>1 pt</strong></div>
+            <div class="score-row"><span>Method</span><strong>1 pt</strong></div>
+            <div class="score-row"><span>Ending</span><strong>1 pt</strong></div>
+            <div class="score-row"><span>More takedowns</span><strong>1 pt</strong></div>
+            <div class="score-row"><span>More significant strikes</span><strong>1 pt</strong></div>
+            <p class="muted small">All five selections are required. Incorrect selections receive 0 points; there are no negative points.</p>
+          </section>
+
+          <section class="sidebar-card">
+            <h3>▥ Leaderboard</h3>
+            <div id="leaderboard"><div class="muted small">Scores appear after results are entered.</div></div>
+          </section>
+
+          <section class="sidebar-card">
+            <h3>▣ Organizer</h3>
+            <p class="muted small">Start fights, enter official results and export picks.</p>
+            <a class="secondary" style="display:block;text-align:center;text-decoration:none" href="admin.html">Open Admin</a>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>Freedom 250 Picks</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
